@@ -14,3 +14,8 @@ after_success:
   - docker build -t paddy/multi-server ./server
   - docker build -t paddy/multi-worker ./worker
   - docker build -t paddy/multi-nginx ./nginx
+  - echo "$DOCKER_PASSWORD" | docker login -u | "$DOCKER_ID" --password-stdin
+  - docker push paddy/multi-client
+  - docker push paddy/multi-server
+  - docker push paddy/multi-worker
+  - docker push paddy/multi-nginx
