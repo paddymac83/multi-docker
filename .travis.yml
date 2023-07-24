@@ -19,3 +19,5 @@ after_success:
   - docker push paddymac83/multi-server
   - docker push paddymac83/multi-worker
   - docker push paddymac83/multi-nginx
+
+# note, testing out creating the Dockerhub repos first.
